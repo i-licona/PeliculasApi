@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 namespace PeliculasApi
@@ -13,6 +14,9 @@ namespace PeliculasApi
 
     /* Configure services method */
     public void ConfigureServices(IServiceCollection services){
+      services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+        this.configuration.GetConnectionString("DevConnection")
+      ));
       services.AddControllers();
       services.AddEndpointsApiExplorer();
       services.AddSwaggerGen( s => {
