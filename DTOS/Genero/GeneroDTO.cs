@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PeliculasApi
-{
-  public class  Genero{
+namespace PeliculasApi{
+  public class  GeneroDTO{
     public int Id { get; set; }
     [Required]
     [StringLength(40)]
