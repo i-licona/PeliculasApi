@@ -64,7 +64,7 @@ namespace PeliculasApi
     }
   
     [HttpPost]
-    public async Task<ActionResult> Post([FromBody] PostGeneroDTO generoDTO)
+    public async Task<ActionResult<GenericResponse<GeneroDTO>>> Post([FromBody] PostGeneroDTO generoDTO)
     {
       try
       {

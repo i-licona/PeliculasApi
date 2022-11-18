@@ -1,5 +1,6 @@
 
 using System.ComponentModel.DataAnnotations;
+using PeliculasApi.Models;
 
 namespace PeliculasApi
 {
@@ -15,5 +16,6 @@ namespace PeliculasApi
     public string Apellido { get; set; }
     public DateTime FechaNacimiento { get; set; }
     public string Foto { get; set; }
+    public List<PeliculasActores> PeliculasActores { get; set; }
   }
 }

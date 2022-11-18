@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using PeliculasApi.services;
 
 namespace PeliculasApi
 {
@@ -16,10 +17,15 @@ namespace PeliculasApi
     /* Configure services method */
     public void ConfigureServices(IServiceCollection services){
       services.AddAutoMapper(typeof(Startup));
+      /* configurar servicio de subida de archivos en Azure */
+      /* services.AddTransient<IAlmacenarArchivos, AlmacenadorArchivosAzure>();  */     
+      /* configurar servicio de subida de archivos en Local */
+      services.AddTransient<IAlmacenarArchivos, AlmacenadorArchivosLocal>();
+      services.AddHttpContextAccessor(); 
       services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
         this.configuration.GetConnectionString("DevConnection")
       ));
-      services.AddControllers();
+      services.AddControllers().AddNewtonsoftJson();
       services.AddEndpointsApiExplorer();
       services.AddSwaggerGen( s => {
         s.SwaggerDoc("v1", new OpenApiInfo { Title = "Api Peliculas", Version = "v1"});
@@ -35,6 +41,7 @@ namespace PeliculasApi
       }
 
       app.UseHttpsRedirection();
+      app.UseStaticFiles();
       app.UseRouting();
       app.UseAuthorization();
       app.UseEndpoints(endpoints => {
