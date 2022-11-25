@@ -3,6 +3,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PeliculasApi.DTO;
+using PeliculasApi.DTO.Filtro;
 using PeliculasApi.DTOS.Pelicula;
 using PeliculasApi.Models;
 using PeliculasApi.services;
@@ -34,7 +35,13 @@ namespace PeliculasApi.Controllers
     [HttpGet]
     public async Task<ActionResult<GenericListResponse<PeliculaDTO>>> Get()
     {
+      var top = 5;
+      var hoy = DateTime.Today;
+      var proximosEstrenos = await context.Peliculas.Where(x => x.FechaEstreno > hoy ).OrderBy(x => x.FechaEstreno).Take(top).ToListAsync();
+      var enCines = await context.Peliculas.Where(x => x.EnCines == true).Take(top).ToListAsync();
       var data = await context.Peliculas.ToListAsync();
+      var result2 = mapper.Map<List<PeliculaDTO>>(proximosEstrenos);
+      var result3 = mapper.Map<List<PeliculaDTO>>(enCines);
       var result = mapper.Map<List<PeliculaDTO>>(data);
       return Ok( new GenericListResponse<PeliculaDTO>{
         Data = result,
@@ -43,20 +50,63 @@ namespace PeliculasApi.Controllers
       });
     }
 
+    [HttpGet("filtro")]
+    public async Task<ActionResult<GenericListResponse<PeliculaDTO>>> Filtrar([FromQuery] FiltroPeliculasDTO filtro)
+    { 
+      var peliculasQueryable = context.Peliculas.AsQueryable();
+      if (!string.IsNullOrEmpty(filtro.Titulo))
+      {
+        peliculasQueryable = peliculasQueryable.Where(x => x.Titulo.Contains(filtro.Titulo));
+      }
+
+      if (filtro.EnCines)
+      {
+        peliculasQueryable = peliculasQueryable.Where(x => x.EnCines == filtro.EnCines);
+      } 
+
+      if (filtro.ProximosEstrenos)
+      {
+        var today = DateTime.Today;
+        peliculasQueryable = peliculasQueryable.Where(x => x.FechaEstreno > today);
+      }
+
+      if (filtro.GeneroId != 0)
+      {
+        peliculasQueryable = peliculasQueryable.Where(x => x.PeliculasGeneros.Select(y => y.GeneroId).Contains(filtro.GeneroId));
+      }
+
+      //var data = await context.Actores.Skip((paginacionDTO.Pagina - 1) * paginacionDTO.RegistersByPage ).Take(paginacionDTO.RegistersByPage).ToListAsync();
+
+      var data = await peliculasQueryable.Skip((filtro.Paginacion.Pagina - 1 ) * filtro.Paginacion.RegistersByPage).Take(filtro.Paginacion.RegistersByPage).ToListAsync();
+
+      var result = mapper.Map<List<PeliculaDTO>>(data);
+
+      return Ok( new GenericListResponse<PeliculaDTO>{
+        Data = result,
+        Message = "Recursos obtenidos correctamente",
+        Status = 200
+      });
+      
+    }
+
     [HttpGet("{id:int}", Name = "getPeliculaById")]
-    public async Task<ActionResult<GenericResponse<PeliculaDTO>>> GetById(int id)
+    public async Task<ActionResult<GenericResponse<PeliculaDetallesDTO>>> GetById(int id)
     {
-      var data = await context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
+      var data = await context.Peliculas
+      .Include(x => x.PeliculasActores).ThenInclude(x => x.Actor)
+      .Include(x => x.PeliculasGeneros).ThenInclude(x => x.Genero)
+      .FirstOrDefaultAsync(x => x.Id == id);
       if (data == null)
       {
-         return NotFound( new GenericResponse<PeliculaDTO>{
+         return NotFound( new GenericResponse<PeliculaDetallesDTO>{
           Data = null,
           Message = "No se encontro el recurso solicitado",
           Status = 400
         });
-      }
-      var result = mapper.Map<PeliculaDTO>(data);        
-      return Ok( new GenericResponse<PeliculaDTO>{
+      } 
+      data.PeliculasActores = data.PeliculasActores.OrderBy(x => x.Orden).ToList();
+      var result = mapper.Map<PeliculaDetallesDTO>(data);        
+      return Ok( new GenericResponse<PeliculaDetallesDTO>{
       Data = result,
       Message = "Recursos obtenidos correctamente",
       Status = 200

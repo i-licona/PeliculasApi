@@ -20,8 +20,45 @@ namespace PeliculasApi {
       CreateMap<Pelicula, PeliculaDTO>().ReverseMap();
       CreateMap<PeliculaCreacionDTO, Pelicula>().ForMember(x => x.Poster, options => options.Ignore())
       .ForMember(x => x.PeliculasGeneros, options => options.MapFrom(MapearPeliculasGeneros))
-      .ForMember(x => x.PeliculasActores, options => options.MapFrom(MapearPeliculasActores));
+      .ForMember(x => x.PeliculasActores, options => options.MapFrom(MapearPeliculasActores)).ReverseMap();
       // CreateMap<PatchActorDTO, Actor>().ReverseMap();
+      CreateMap<Pelicula, PeliculaDetallesDTO>().ForMember(x => x.Generos, options => options.MapFrom(MapPeliculasGeneros))
+      .ForMember( x => x.Actores, options => options.MapFrom(MapPeliculasActores));
+
+    }
+
+    private List<ActorPeliculaDetalleDTO> MapPeliculasActores(Pelicula pelicula, PeliculaDetallesDTO peliculaDetalles)
+    {
+       var result = new List<ActorPeliculaDetalleDTO>();
+
+       if (pelicula.PeliculasActores == null)
+       {
+          return result;
+       }
+
+      foreach (var actorPelicula in pelicula.PeliculasActores)
+      {
+        result.Add( new ActorPeliculaDetalleDTO { 
+          ActorId = actorPelicula.ActorId, 
+          Personaje = actorPelicula.Personaje,
+          NombrePersona = actorPelicula.Actor.Nombre + ' '  + actorPelicula.Actor.Apellido 
+        });
+      }
+
+      return result;
+    }
+    private List<GeneroDTO> MapPeliculasGeneros(Pelicula pelicula, PeliculaDetallesDTO peliculaDetalles)
+    {
+      var result = new List<GeneroDTO>();
+      if (pelicula.PeliculasGeneros == null )
+      {
+        return result;  
+      }
+      foreach (var generoPelicula in pelicula.PeliculasGeneros)
+      {
+        result.Add(new GeneroDTO { Id = generoPelicula.GeneroId, Nombre = generoPelicula.Genero.Nombre });
+      }
+      return result;
     }
 
     private List<PeliculasGeneros> MapearPeliculasGeneros(PeliculaCreacionDTO peliculaCreacionDTO, Pelicula pelicula)
