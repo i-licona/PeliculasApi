@@ -7,6 +7,7 @@ using PeliculasApi.DTO.Filtro;
 using PeliculasApi.DTOS.Pelicula;
 using PeliculasApi.Models;
 using PeliculasApi.services;
+using System.Linq.Dynamic.Core;
 
 namespace PeliculasApi.Controllers
 {
@@ -19,17 +20,20 @@ namespace PeliculasApi.Controllers
     private readonly ApplicationDbContext context;
     private readonly IMapper mapper;
     private readonly IAlmacenarArchivos almacenarArchivos;
+    private readonly ILogger<PeliculaController> logger;
     private readonly string contenedor = "peliculas";
 
     public PeliculaController(
       ApplicationDbContext context,
       IMapper mapper,
-      IAlmacenarArchivos almacenarArchivos
+      IAlmacenarArchivos almacenarArchivos,
+      ILogger<PeliculaController> logger
     )
     {
       this.context = context;
       this.mapper = mapper;
       this.almacenarArchivos = almacenarArchivos;
+      this.logger = logger;
     }
 
     [HttpGet]
@@ -75,7 +79,34 @@ namespace PeliculasApi.Controllers
         peliculasQueryable = peliculasQueryable.Where(x => x.PeliculasGeneros.Select(y => y.GeneroId).Contains(filtro.GeneroId));
       }
 
-      //var data = await context.Actores.Skip((paginacionDTO.Pagina - 1) * paginacionDTO.RegistersByPage ).Take(paginacionDTO.RegistersByPage).ToListAsync();
+      if (!string.IsNullOrEmpty(filtro.CampoOrdenar))
+      {
+        // usar libreria using System.Linq.Dynamic.Core para que funcione esta sintaxis
+        var typeOrder = filtro.OrdenAscendente ? "ascending" : "descending";
+
+        try
+        {
+          peliculasQueryable = peliculasQueryable.OrderBy($"{ filtro.CampoOrdenar } { typeOrder }");   
+        }
+        catch (Exception ex)
+        {
+
+          logger.LogError(ex.Message, ex);
+        }     
+
+        /* if (filtro.CampoOrdenar == "titulo")
+        {
+          if (filtro.OrdenAscendente == true)
+          {
+            peliculasQueryable = peliculasQueryable.OrderBy(x => x.Titulo );  
+          }
+          else 
+          {
+            peliculasQueryable = peliculasQueryable.OrderByDescending(x => x.Titulo );
+          }
+        }  */
+
+      }
 
       var data = await peliculasQueryable.Skip((filtro.Paginacion.Pagina - 1 ) * filtro.Paginacion.RegistersByPage).Take(filtro.Paginacion.RegistersByPage).ToListAsync();
 

@@ -16,7 +16,8 @@
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.0",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "System.Linq.Dynamic.Core": "1.2.0"
         },
         "runtime": {
           "PeliculasApi.dll": {}
@@ -532,6 +533,14 @@
           "lib/net6.0/System.IO.Hashing.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Linq.Dynamic.Core/1.2.0": {
+        "runtime": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
           }
         }
       },
@@ -1061,6 +1070,13 @@
       "sha512": "sha512-Rfm2jYCaUeGysFEZjDe7j1R4x6Z6BzumS/vUT5a1AA/AWJuGX71PoGB0RmpyX3VmrGqVnAwtfMn39OHR8Y/5+g==",
       "path": "system.io.hashing/6.0.0",
       "hashPath": "system.io.hashing.6.0.0.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nbeI4oOTBNsS2gErl9M0FS2gYW7626DaiFGH2wyx3FS3VdRy3wPZxyFJEFgvCc0/WzySG4z3afOS4qyab51Tng==",
+      "path": "system.linq.dynamic.core/1.2.0",
+      "hashPath": "system.linq.dynamic.core.1.2.0.nupkg.sha512"
     },
     "System.Memory.Data/1.0.2": {
       "type": "package",
