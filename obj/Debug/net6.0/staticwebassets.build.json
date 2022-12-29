@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LzQbdOBOh149CAHucaNADFShi4+fk8GLurWcL+tgtJc=",
+  "Hash": "YyW8eO7NHOk7d7L5Js4p3QkBPZCCRoio6N3VYBa2RMw=",
   "Source": "PeliculasApi",
   "BasePath": "_content/PeliculasApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PeliculasApi\\wwwroot",
       "Source": "PeliculasApi",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\actores\\07bc48e4-b194-4530-b9c1-782604fcfb84.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\actores\\07bc48e4-b194-4530-b9c1-782604fcfb84.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "actores/07bc48e4-b194-4530-b9c1-782604fcfb84.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\actores\\07bc48e4-b194-4530-b9c1-782604fcfb84.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\actores\\740804f0-11ff-48cb-a556-d88dc550c817.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\actores\\740804f0-11ff-48cb-a556-d88dc550c817.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "actores/740804f0-11ff-48cb-a556-d88dc550c817.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\actores\\740804f0-11ff-48cb-a556-d88dc550c817.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\actores\\d723daa3-b981-44ef-84f7-92f7943d058e.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\actores\\d723daa3-b981-44ef-84f7-92f7943d058e.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "actores/d723daa3-b981-44ef-84f7-92f7943d058e.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\actores\\d723daa3-b981-44ef-84f7-92f7943d058e.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\actores\\dd55e455-80d9-434a-a5ac-bf3c6ec3c340.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\actores\\dd55e455-80d9-434a-a5ac-bf3c6ec3c340.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "actores/dd55e455-80d9-434a-a5ac-bf3c6ec3c340.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\actores\\dd55e455-80d9-434a-a5ac-bf3c6ec3c340.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\actores\\e5dbbbc4-d5bd-4536-826c-1c913090f98c.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\actores\\e5dbbbc4-d5bd-4536-826c-1c913090f98c.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "actores/e5dbbbc4-d5bd-4536-826c-1c913090f98c.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\actores\\e5dbbbc4-d5bd-4536-826c-1c913090f98c.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\actores\\ee052b03-43dc-4875-8180-2fa73a24f630.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\actores\\ee052b03-43dc-4875-8180-2fa73a24f630.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "actores/ee052b03-43dc-4875-8180-2fa73a24f630.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\actores\\ee052b03-43dc-4875-8180-2fa73a24f630.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\peliculas\\2b949390-b953-4a2e-bdcc-421527bb5ab4.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\peliculas\\2b949390-b953-4a2e-bdcc-421527bb5ab4.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "peliculas/2b949390-b953-4a2e-bdcc-421527bb5ab4.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\peliculas\\2b949390-b953-4a2e-bdcc-421527bb5ab4.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\peliculas\\74cb6505-ab6c-4bf3-83e2-9abc0d9b1dad.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\peliculas\\74cb6505-ab6c-4bf3-83e2-9abc0d9b1dad.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "peliculas/74cb6505-ab6c-4bf3-83e2-9abc0d9b1dad.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\peliculas\\74cb6505-ab6c-4bf3-83e2-9abc0d9b1dad.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\peliculas\\a871650e-68eb-4a6e-bd9f-61160b27bcab.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\peliculas\\a871650e-68eb-4a6e-bd9f-61160b27bcab.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "peliculas/a871650e-68eb-4a6e-bd9f-61160b27bcab.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\peliculas\\a871650e-68eb-4a6e-bd9f-61160b27bcab.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\peliculas\\aee5e924-095e-4b7d-8270-eb99efb28f74.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\peliculas\\aee5e924-095e-4b7d-8270-eb99efb28f74.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "peliculas/aee5e924-095e-4b7d-8270-eb99efb28f74.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\peliculas\\aee5e924-095e-4b7d-8270-eb99efb28f74.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\peliculas\\b793fe2f-75b8-49de-a2ff-81d83db2e98b.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\peliculas\\b793fe2f-75b8-49de-a2ff-81d83db2e98b.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "peliculas/b793fe2f-75b8-49de-a2ff-81d83db2e98b.jpg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\peliculas\\b793fe2f-75b8-49de-a2ff-81d83db2e98b.jpg"
     },
     {
-      "Identity": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\peliculas\\b871629e-4e1b-4b2f-919a-ad240b40b9bd.jpg",
+      "Identity": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\peliculas\\b871629e-4e1b-4b2f-919a-ad240b40b9bd.jpg",
       "SourceId": "PeliculasApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\josli\\Documents\\proyects\\Csharp\\PeliculasApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ignacio\\Documents\\Repositories\\Net\\PeliculasApi\\wwwroot\\",
       "BasePath": "_content/PeliculasApi",
       "RelativePath": "peliculas/b871629e-4e1b-4b2f-919a-ad240b40b9bd.jpg",
       "AssetKind": "All",
